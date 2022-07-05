@@ -594,6 +594,16 @@ abstract class ModelWithContent extends Model
 	}
 
 	/**
+	 * Returns the model's unique global ID
+	 *
+	 * @return string
+	 */
+	public function uuid(): string
+	{
+		return Binding::for($this)->toUuid();
+	}
+
+	/**
 	 * Updates the model data
 	 *
 	 * @param array|null $input
